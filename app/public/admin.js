@@ -1,5 +1,7 @@
 document.getElementById("nota-form").addEventListener("submit", async (e) => {
   e.preventDefault();
+  const notaTextElement = document.getElementById("nota-text"); // Obtener el elemento del DOM
+
   const notaText = document.getElementById("nota-text").value;
   if (!notaText.trim()) return;
 
@@ -17,6 +19,8 @@ document.getElementById("nota-form").addEventListener("submit", async (e) => {
   console.log(guardarResJson); // Imprime la respuesta completa para depuración
   if (guardarRes.ok) {
     agregarNotaAlDOM(guardarResJson);
+    notaTextElement.value = ''; // Limpia el campo de texto después de guardar la nota
+
   } else {
     console.error('Error guardando la nota');
   }
@@ -46,6 +50,7 @@ function agregarNotaAlDOM(notaObjeto) {
   // Contenido de la nota
   const textoElement = document.createElement("div");
   textoElement.classList.add("texto");
+
   textoElement.textContent = notaObjeto.nota;
   
   // Fecha de la nota
@@ -54,7 +59,7 @@ function agregarNotaAlDOM(notaObjeto) {
   console.log("Valor original de la fecha:", notaObjeto.fecha); // Esto debería mostrarte la fecha
   const fecha = new Date(notaObjeto.fecha); // notaObjeto.fecha debe ser una fecha en formato ISO o un timestamp.
   console.log("Fecha convertida:", fecha.toLocaleString()); // Verifica si la fecha es válida
-  // ..
+ 
 
   fechaElement.textContent = fecha.toLocaleString();
 
@@ -103,8 +108,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       console.error(error);
   }
 });
-
-
 
 
 

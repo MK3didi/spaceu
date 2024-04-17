@@ -14,21 +14,113 @@ html {
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
+  
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--color-text);
 }
 
 
 .form-container{
-  background: #fff;
+  background-color: rgba(255, 255, 255, 0.95); /* Blanco con un poco de opacidad */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 500px;
   margin: 30px auto;
+  border: 1px solid #ddd; /* Borde ligero para definir el contenedor */
 }
+
+
+
+#nombre-usuario {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#nota-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#nota-text {
+  border: 2px solid var(--color-secondary);
+  border-radius: 4px;
+  padding: 10px;
+  height: 100px;
+  resize: vertical;
+  font-size: 1rem;
+  margin-bottom: 10px;
+
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"] {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+button[type="submit"]:hover {
+  background-color: var(--color-secondary);
+}
+
+#logout-button {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  margin-top: 20px;
+}
+
+#logout-button:hover {
+  background-color: darken(var(--color-accent), 10%);
+}
+
+.nota {
+  background-color: var(--color-background);
+  padding: 10px;
+  border: 1px solid #ccc;  
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column; /* Cambio de 'justify-content: space-between' y 'align-items: center' a 'flex-direction: column' */
+}
+.texto {
+  /* Remueve las reglas que impiden que el texto se ajuste */
+  overflow: auto; /* Permite desplazar si el contenido es más largo que el contenedor */
+  white-space: normal; /* Permite que el texto se ajuste a líneas nuevas */
+  word-break: break-word; /* Asegura que las palabras se corten correctamente al final de la línea */
+}
+
+
+.delete-button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  align-self: flex-end; /* Alinea el botón de borrar al final de la nota */
+}
+
+.delete-button:hover {
+  background-color: darken(var(--color-primary), 10%);
+}
+
 
 
 form{
@@ -38,8 +130,11 @@ form{
 }
 
 form+p, form p {
-  text-align: center;
+  text-align
+  : center;
 }
+
+
 
 input, button{
   border-radius: 4px;
@@ -47,7 +142,6 @@ input, button{
   padding: 15px 30px;
   font-size: larger;
 }
-
 
 
 .error{
@@ -66,62 +160,6 @@ input, button{
   height:1px;
   overflow:hidden;
 }
-/**********/
 
-#nombre-usuario {
-  font-size: 1.5em;
-  color: #333;
-  margin-bottom: 20px;
-}
-#nota-form {
-  display: flex;
-  flex-direction: column;
-}
-#nota-text {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-button {
-  background-color: #198754;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-button:hover {
-  background-color: #0056b3;
-}
-#logout-button {
-  background-color: #dc3545;
-  margin-top: 10px;
-}
-#logout-button:hover {
-  background-color: #c82333;
-}
-.nota {
-  padding: 10px;
-  background: #f8f9fa;
-  margin-top: 10px;
-  border-radius: 4px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.delete-button {
-  background-color: #dc3545;
-  color: white;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.delete-button:hover {
-  background-color: #c82333;
-}
 
 

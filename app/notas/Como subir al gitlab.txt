@@ -1,3 +1,24 @@
+CREAR DESDE 0 : 
+
+Inicializa un repositorio Git:
+
+Ejecuta los siguientes comandos:
+git init
+git add .
+git commit -m "Primer commit"
+
+Conecta tu repositorio local a GitHub:
+Ejecuta el siguiente comando, reemplazando <URL_del_repositorio> con la URL de tu repositorio:
+git remote add origin <URL_del_repositorio>
+
+Inserta tu código en GitHub:
+Finalmente, envía tus cambios al repositorio remoto en GitHub:
+git push -u origin master
+
+
+
+
+
 
 ### Paso 1: Crear una Nueva Rama para el Trabajo
 
