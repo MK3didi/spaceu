@@ -1,0 +1,90 @@
+
+### Paso 1: Crear una Nueva Rama para el Trabajo
+
+Antes de comenzar a trabajar en las mejoras o correcciones, el colaborador debería crear una nueva rama para mantener esos cambios separados de la rama principal (`main` o `master`).
+
+
+# Cambiar a la rama principal, que suele ser 'main' o 'master'
+git checkout main
+
+# Asegurarse de que la rama principal está actualizada
+git pull origin main
+
+# Crear y cambiar a una nueva rama
+git checkout -b nombre-de-la-nueva-rama
+
+
+### Paso 2: Hacer Cambios
+
+Con la nueva rama creada, el colaborador ahora puede proceder a realizar cambios en el código.
+
+
+# Editar archivos en el editor de código o IDE de preferencia.
+
+
+### Paso 3: Añadir y Confirmar Cambios
+
+Después de realizar cambios, deben agregar esos cambios al "staging area" y luego confirmarlos en un nuevo commit.
+
+
+# Añadir todos los cambios al staging area
+git add .
+
+# Confirmar los cambios en un nuevo commit con un mensaje descriptivo
+git commit -m "Descripción detallada de la mejora o corrección"
+
+
+### Paso 4: Subir la Rama al Repositorio Remoto
+
+Una vez que el trabajo local está confirmado, se debe subir la rama al repositorio remoto.
+
+
+# Subir la nueva rama al repositorio remoto
+git push -u origin nombre-de-la-nueva-rama
+
+
+### Paso 5: Crear un Pull Request (PR)
+
+El colaborador deberá ir al repositorio de GitHub y abrir un nuevo Pull Request.
+
+1. Ir al repositorio en GitHub.
+2. Hacer clic en "Pull requests" y luego en "New pull request".
+3. Seleccionar la rama que acaban de subir en el desplegable "compare".
+4. Hacer clic en "Create pull request".
+5. Añadir un título y una descripción detallada de los cambios.
+6. Hacer clic en "Create pull request" nuevamente para abrir el PR.
+
+### Paso 6: Revisión y Discusión del PR
+
+Ahora, otros miembros del equipo o tú como responsable puedes:
+
+1. Revisar los cambios en el PR.
+2. Dejar comentarios o solicitar modificaciones si es necesario.
+3. Aprobar el PR una vez que estés satisfecho con los cambios.
+
+### Paso 7: Fusionar el PR
+
+Cuando el PR ha sido revisado y aprobado, puedes fusionarlo con la rama principal.
+
+1. Hacer clic en "Merge pull request".
+2. Confirmar la fusión si estás satisfecho con los cambios.
+3. Opcionalmente, eliminar la rama de características después de la fusión para mantener organizado el repositorio.
+
+### Paso 8: Sincronizar la Rama Principal Local
+
+Una vez que la rama de características se haya fusionado, es buena idea que cada colaborador sincronice su rama principal local.
+
+
+# Cambiar de nuevo a la rama principal
+git checkout main
+
+# Jalar los cambios más recientes del repositorio remoto
+git pull origin main
+
+
+### Notas Adicionales
+
+- Es importante que cada colaborador trabaje en una rama separada para cada nueva funcionalidad o corrección.
+- Cada Pull Request debe ser lo más pequeño y enfocado posible para facilitar una revisión eficiente.
+- Animar a los colaboradores a mantener sus ramas actualizadas con la rama principal para minimizar los conflictos de fusión.
+

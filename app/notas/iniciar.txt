@@ -1,0 +1,3 @@
+npm init -y
+ npm i dotenv express bcryptjs cookie-parser jsonwebtoken
+ npm install nodemon --save-dev

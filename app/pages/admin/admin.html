@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="admin.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <div class="form-container">
+      <h2 id="nombre-usuario"></h2>
+
+      
+      <form id="nota-form">
+        <textarea id="nota-text" placeholder="Escribe tu nota aquí..."></textarea>
+        <button type="submit">Guardar Nota</button>
+      </form>
+      <section id="notas-container">
+        <!-- Aquí se inyectarán las notas del usuario -->
+      </section>
+      <button id="logout-button">Cerrar sesión</button>
+    </div>
+  </main>
+  
+</body>
+
+</html>
