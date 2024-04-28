@@ -34,6 +34,11 @@ app.get('/', (req, res) => {  res.sendFile(path.join(__dirname, '/public/index.h
 app.get("/login", authorization.soloPublico, (req, res) => res.sendFile(__dirname + "/pages/login.html"));
 app.get("/register", authorization.soloPublico, (req, res) => res.sendFile(__dirname + "/pages/register.html"));
 app.get("/admin", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/pages/admin/admin.html"));
+
+app.get("/practicantes", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/pages/admin/practicantes.html"));
+app.get("/chatbot", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/pages/admin/chatbot.html"));
+app.get("/profesional", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/pages/admin/profesional.html"));
+
 app.post("/api/login", authentication.login);
 app.post("/api/register", authentication.register);
 app.post("/api/logout", authentication.logout);

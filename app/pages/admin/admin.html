@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,13 +8,39 @@
   <link rel="stylesheet" href="style.css">
   <script src="admin.js" defer></script>
 </head>
-
 <body>
+
   <main>
     <div class="form-container">
-      <h2 id="nombre-usuario"></h2>
+    <h2 id="nombre-usuario">Admin Dashboard</h2>
 
-      
+   
+    <!-- Barra de navegación con pestañas para cada sección -->
+    <div class="cards-container">
+      <div class="card" onclick="location.href='/practicantes';">
+        <img src="assets/img/admin/practicante.png" alt="Practicantes">
+        <div class="card-content">
+          <h3>Practicantes</h3>
+        </div>
+      </div>
+      <div class="card" onclick="location.href='/chatbot';">
+        <img src="assets/img/admin/chatbot.png" alt="Chatbot">
+        <div class="card-content">
+          <h3>Chatbot</h3>
+        </div>
+      </div>
+      <div class="card" onclick="location.href='/profesional';">
+        <img src="assets/img/admin/profesional.png" alt="Profesional">
+        <div class="card-content">
+          <h3>Profesional</h3>
+        </div>
+      </div>
+    </div>
+
+   
+    <!-- Contenido de la vista actual, por ejemplo 'Guardar Nota' -->
+    <div class="form-container">
+        <h3>Si tienes alguna nota, escríbela aquí :</h3>
       <form id="nota-form">
         <textarea id="nota-text" placeholder="Escribe tu nota aquí..."></textarea>
         <button type="submit">Guardar Nota</button>
@@ -24,7 +51,7 @@
       <button id="logout-button">Cerrar sesión</button>
     </div>
   </main>
-  
 </body>
-
 </html>
+
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practicantes</title>
+  <link rel="stylesheet" href="assets/css/practicantes.css">
+</head>
+<body>
+    <header>
+    
+        <a href="/admin" class="boton-volver">Volver</a>
+
+
+      <button class="header-button" id="view-cards">Vista de Tarjetas</button>
+      <button class="header-button" id="view-list">Vista de Lista</button>
+    </header>
+  
+    <section id="practicantes-container" class="cards-view">
+
+
+      <div class="practicante-item">
+        <img src="assets/img/admin/practicante.png" alt="Nombre del Practicante" class="practicante-img">
+        <div class="practicante-info">
+          <h3>Nombre del Practicante</h3>
+          <p>Descripción breve del practicante o su especialidad.</p>
+          <button class="chat-button">Chatear Ahora</button>
+        </div>
+      </div>
+      <div class="practicante-item">
+        <img src="assets/img/admin/practicante.png" alt="Nombre del Practicante" class="practicante-img">
+        <div class="practicante-info">
+          <h3>Nombre del Practicante</h3>
+          <p>Descripción breve del practicante o su especialidad.</p>
+          <button class="chat-button">Chatear Ahora</button>
+        </div>
+      </div>
+      <div class="practicante-item">
+        <img src="assets/img/admin/practicante.png" alt="Nombre del Practicante" class="practicante-img">
+        <div class="practicante-info">
+          <h3>Nombre del Practicante</h3>
+          <p>Descripción breve del practicante o su especialidad.</p>
+          <button class="chat-button">Chatear Ahora</button>
+        </div>
+      </div>
+
+      <div class="practicante-item">
+        <img src="assets/img/admin/practicante.png" alt="Nombre del Practicante" class="practicante-img">
+        <div class="practicante-info">
+          <h3>Nombre del Practicante</h3>
+          <p>Descripción breve del practicante o su especialidad.</p>
+          <button class="chat-button">Chatear Ahora</button>
+        </div>
+      </div>
+      <div class="practicante-item">
+        <img src="assets/img/admin/practicante.png" alt="Nombre del Practicante" class="practicante-img">
+        <div class="practicante-info">
+          <h3>Nombre del Practicante</h3>
+          <p>Descripción breve del practicante o su especialidad.</p>
+          <button class="chat-button">Chatear Ahora</button>
+        </div>
+      </div>
+      <div class="practicante-item">
+        <img src="assets/img/admin/practicante.png" alt="Nombre del Practicante" class="practicante-img">
+        <div class="practicante-info">
+          <h3>Nombre del Practicante</h3>
+          <p>Descripción breve del practicante o su especialidad.</p>
+          <button class="chat-button">Chatear Ahora</button>
+        </div>
+      </div>
+ 
+
+
+
+    </section>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  var container = document.getElementById('practicantes-container');
+  var btnCards = document.getElementById('view-cards');
+  var btnList = document.getElementById('view-list');
+
+  btnCards.addEventListener('click', function() {
+    container.classList.remove('list-view');
+    container.classList.add('cards-view');
+  });
+
+  btnList.addEventListener('click', function() {
+    container.classList.remove('cards-view');
+    container.classList.add('list-view');
+  });
+});
+
+  </script>
+  </body>
+  
+</html>

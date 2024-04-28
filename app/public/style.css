@@ -33,8 +33,51 @@ body {
   max-width: 500px;
   margin: 30px auto;
   border: 1px solid #ddd; /* Borde ligero para definir el contenedor */
+  position: relative; /* Agrega posición relativa */
+
 }
 
+.boton-volver {
+  position: absolute; /* Posiciona el botón en relación al .form-container */
+  top: 10px; /* Espacio desde el borde superior del contenedor */
+  right: 10px; /* Espacio desde el borde derecho del contenedor */
+  padding: 10px 20px;
+  /* ... resto de los estilos ... */
+  display: inline-block;
+  margin-bottom: 20px;
+  background-color: #50cc88; /* Color de fondo del botón */
+  color: rgb(3, 0, 0); /* Color del texto del botón */
+  text-decoration: none; /* Eliminar subrayado de enlace */
+  border-radius: 5px; /* Bordes redondeados */
+  text-align: center;
+}
+.boton-volver:hover {
+  background-color: #0b632d; /* Color de fondo al pasar el mouse */
+}
+
+
+/* Estilos para la barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #f2f2f2;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-item:hover {
+  background-color: #e2e2e2;
+}
+
+/* Continúa con tus otros estilos... */
 
 
 #nombre-usuario {
@@ -161,5 +204,37 @@ input, button{
   overflow:hidden;
 }
 
+/* Estilos para el contenedor de las cards */
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+/* Estilo de las cards */
+.card {
+  width: 30%; /* O el ancho que prefieras */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer; /* Para indicar que se puede hacer clic */
+  transition: transform 0.3s ease-in-out; /* Para un efecto de hover suave */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Eleva la card al pasar el ratón por encima */
+}
+
+.card img {
+  width: 100%;
+  display: block; /* Asegúrate de que la imagen se ajusta al contenedor */
+}
+
+.card-content {
+  padding: 10px;
+  text-align: center; /* Centrar el texto en la card */
+}
+
+/* Asegúrate de que el resto de tu CSS no entre en conflicto con estas nuevas reglas */
 
 

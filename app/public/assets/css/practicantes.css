@@ -1,0 +1,203 @@
+/* ... Estilos anteriores ... */
+
+html {
+    /* Sacado de https://css-pattern.com/ */
+    --s: 200px; /* control the size */
+    --c: #fff; /* first color */
+    
+    --_g: #0000 8%,var(--c) 0 17%,#0000 0 58%;
+    background: 
+      linear-gradient(135deg,#0000 20.5%,var(--c) 0 29.5%,#0000 0) 0 calc(var(--s)/4),
+      linear-gradient( 45deg,var(--_g)) calc(var(--s)/2) 0,
+      linear-gradient(135deg,var(--_g),var(--c) 0 67%,#0000 0),        
+      linear-gradient( 45deg,var(--_g),var(--c) 0 67%,#0000 0 83%,var(--c) 0 92%,#0000 0),
+      #7AB9C5; /* second color */
+    background-size: var(--s) var(--s);
+  }
+
+  
+
+  main {
+    width: 90%; /* Ancho del contenedor principal */
+    max-width: 1200px;
+    margin: 20px auto; /* Margen superior e inferior para main */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alineación central del contenido principal */
+  }
+  
+  header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 10; /* Asegúrate de que el header está sobre otros elementos */
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra para el header */
+    padding: 10px 0; /* Relleno superior e inferior para el header */
+  }
+  
+  /* Resto de los estilos ... */
+  
+
+  
+.boton-volver {
+    position: absolute; /* Posiciona el botón en relación al .form-container */
+    top: 10px; /* Espacio desde el borde superior del contenedor */
+    right: 10px; /* Espacio desde el borde derecho del contenedor */
+    padding: 10px 20px;
+    /* ... resto de los estilos ... */
+    display: inline-block;
+    margin-bottom: 20px;
+    background-color: #50cc88; /* Color de fondo del botón */
+    color: rgb(3, 0, 0); /* Color del texto del botón */
+    text-decoration: none; /* Eliminar subrayado de enlace */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center;
+  }
+  .boton-volver:hover {
+    background-color: #0b632d; /* Color de fondo al pasar el mouse */
+  }
+
+  
+.practicante-item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin: 10px 0;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.practicante-item:hover {
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+.practicante-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+/* ... Estilos anteriores ... */
+
+.cards-view .practicante-item {
+    /* Estilos específicos para la vista de tarjetas para hacerlos cuadrados */
+    flex-direction: column;
+    align-items: center;
+    width: calc(33.333% - 20px); /* Tres items por fila con espacio */
+    margin: 10px; /* Espacio alrededor de las tarjetas */
+  }
+  
+  .list-view .practicante-item {
+    /* Estilos específicos para la vista de lista */
+    flex-direction: row;
+    width: auto; /* Ancho automático para vista de lista */
+  }
+  
+  /* Ajustes generales para la vista de tarjetas */
+  #practicantes-container.cards-view {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  /* Ajustes para imagen en la vista de tarjetas */
+  .cards-view .practicante-img {
+    width: 100%; /* Toma todo el ancho en vista de tarjetas */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+  }
+  
+  .cards-view .practicante-info {
+    text-align: center; /* Centra el texto en las tarjetas */
+  }
+  
+  /* Ajustes para botones en la vista de tarjetas */
+  .cards-view .chat-button {
+    width: 100%; /* El botón ocupa todo el ancho de la tarjeta */
+    padding: 10px; /* Ajuste de padding para botones en tarjetas */
+    margin-top: auto; /* Empuja el botón al fondo de la tarjeta */
+  }
+  
+  .header-button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 10px; /* Añadido un poco más de margen entre botones */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .header-button:hover {
+    background: #367C39;
+  }
+  
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .practicante-item {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+    width: calc(100% / 3 - 20px); /* Tres elementos por fila */
+    margin: 10px; /* Ajustado el margen para mantener la consistencia */
+  }
+  
+  .cards-view .practicante-item {
+    flex-direction: column;
+    align-items: center; /* Alineación central para el contenido de la tarjeta */
+  }
+  
+  .list-view .practicante-item {
+    flex-direction: row;
+    align-items: start; /* Alineación al principio para la vista de lista */
+  }
+  
+  .practicante-img {
+    width: 150px; /* Imagen más grande para la tarjeta */
+    height: 150px; /* Altura igual al ancho para mantener la proporción */
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .practicante-info h3 {
+    margin: 10px 0;
+    text-align: center; /* Asegura que el nombre esté centrado */
+  }
+  
+  .practicante-info p {
+    text-align: center;
+  }
+  
+  .chat-button {
+    background: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 15px;
+    margin-top: 15px; /* Espacio encima del botón */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .chat-button:hover {
+    background: #367C39;
+  }
+  
+  @media (max-width: 768px) {
+    .practicante-item {
+      width: 100%; /* Ocupa el 100% en pantallas más pequeñas */
+    }
+  }
+  
