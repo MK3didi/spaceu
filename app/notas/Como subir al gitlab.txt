@@ -19,33 +19,23 @@ git push -u origin master
 
 
 
+****EN CASO HAY ALGUN ERROR*** COLORCAR :
+git reset --hard origin/master
+Y EMPEZAR DE nuevo
 
 ### Paso 1: Crear una Nueva Rama para el Trabajo
 
-Antes de comenzar a trabajar en las mejoras o correcciones, el colaborador debería crear una nueva rama para mantener esos cambios separados de la rama principal (`main` o `master`).
-
-
 # Cambiar a la rama principal, que suele ser 'main' o 'master'
-git checkout main
+git checkout master
 
 # Asegurarse de que la rama principal está actualizada
-git pull origin main
+git pull origin master
 
 # Crear y cambiar a una nueva rama
 git checkout -b nombre-de-la-nueva-rama
 
 
 ### Paso 2: Hacer Cambios
-
-Con la nueva rama creada, el colaborador ahora puede proceder a realizar cambios en el código.
-
-
-# Editar archivos en el editor de código o IDE de preferencia.
-
-
-### Paso 3: Añadir y Confirmar Cambios
-
-Después de realizar cambios, deben agregar esos cambios al "staging area" y luego confirmarlos en un nuevo commit.
 
 
 # Añadir todos los cambios al staging area
