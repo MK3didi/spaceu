@@ -23,7 +23,7 @@
           <h3>Practicantes</h3>
         </div>
       </div>
-      <div class="card" onclick="location.href='/chatbot';">
+      <div class="card" >
         <img src="assets/img/admin/chatbot.png" alt="Chatbot">
         <div class="card-content">
           <h3>Chatbot</h3>
@@ -51,6 +51,19 @@
       <button id="logout-button">Cerrar sesión</button>
     </div>
   </main>
+  <script type="text/javascript">
+    (function(d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function() {
+          window.voiceflow.chat.load({
+            verify: { projectID: '66302a610f69d37b44f183fe' },
+            url: 'https://general-runtime.voiceflow.com',
+            versionID: 'production'
+          });
+        }
+        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
 </body>
 </html>
 
